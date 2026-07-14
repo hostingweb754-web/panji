@@ -1,1 +1,380 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Project Kusanagi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #080b11;
+            --card-bg: rgba(13, 20, 35, 0.7);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --neon-cyan: #00f2fe;
+            --neon-magenta: #ff007f;
+            --neon-purple: #9b51e0;
+            --border-glow: rgba(0, 242, 254, 0.15);
+            --gradient-primary: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(155, 81, 224, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        /* Glowing Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080b11;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--neon-purple), var(--neon-cyan));
+            border-radius: 4px;
+        }
+
+        header {
+            position: relative;
+            padding: 80px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(180deg, rgba(8, 11, 17, 0.95) 0%, rgba(8, 11, 17, 0.5) 100%);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 80px;
+            background: var(--gradient-primary);
+            filter: blur(50px);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .logo-text {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ffffff, #c2d1e6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-accent {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+            display: none; /* Hidden on mobile */
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                display: block;
+            }
+        }
+
+        .toc-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid var(--neon-magenta);
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-item a {
+            display: block;
+            padding: 8px 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            border-left: 2px solid transparent;
+        }
+
+        .toc-item a:hover {
+            color: var(--neon-cyan);
+            background: rgba(0, 242, 254, 0.05);
+            border-left-color: var(--neon-cyan);
+            padding-left: 15px;
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 20px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            font-size: 1.02rem;
+        }
+
+        li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--neon-cyan);
+            font-size: 0.8rem;
+        }
+
+        .highlight {
+            color: var(--neon-cyan);
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 60px;
+            background: rgba(8, 11, 17, 0.95);
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 24px;
+            background: var(--gradient-primary);
+            color: #080b11;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(155, 81, 224, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-glow"></div>
+        <div class="logo-container">
+            <h1 class="logo-text">PROJECT <span class="logo-accent">KUSANAGI</span></h1>
+        </div>
+        <div class="subtitle">Android Game Privacy Policy</div>
+        <div class="last-updated">Last Updated: July 14, 2026</div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Table of Contents -->
+        <aside class="sidebar">
+            <div class="toc-title">Quick Navigation</div>
+            <ul class="toc-list">
+                <li class="toc-item"><a href="#intro">Introduction</a></li>
+                <li class="toc-item"><a href="#data-collection">Data Collection</a></li>
+                <li class="toc-item"><a href="#data-usage">How We Use Data</a></li>
+                <li class="toc-item"><a href="#third-party">Third-Party Services</a></li>
+                <li class="toc-item"><a href="#security">Security</a></li>
+                <li class="toc-item"><a href="#children">Children's Privacy</a></li>
+                <li class="toc-item"><a href="#changes">Changes to Policy</a></li>
+                <li class="toc-item"><a href="#contact">Contact Us</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Introduction -->
+            <section id="intro" class="card">
+                <h2>Introduction</h2>
+                <p>Welcome to <span class="highlight">Project Kusanagi</span>, an action-packed 2D cyber-ninja platformer game built for Android devices. This Privacy Policy is designed to inform you of our policies regarding the collection, use, and disclosure of personal information if you decide to use our game.</p>
+                <p>By downloading, installing, or playing Project Kusanagi, you agree to the collection and use of information in relation to this policy.</p>
+            </section>
+
+            <!-- Data Collection -->
+            <section id="data-collection" class="card">
+                <h2>Information Collection</h2>
+                <p>Project Kusanagi is designed to protect your privacy. We prioritize data minimization and transparency.</p>
+                <ul>
+                    <li><span class="highlight">No Personal Data:</span> We do not collect, request, or store any personally identifiable information (such as your name, email address, phone number, or location).</li>
+                    <li><span class="highlight">Local Storage:</span> The game stores your unlocked level progress (up to Level 50), high scores, sound preferences, and kunai inventory locally on your device via secure Shared Preferences. This data stays on your device.</li>
+                </ul>
+            </section>
+
+            <!-- How We Use Data -->
+            <section id="data-usage" class="card">
+                <h2>How We Use Information</h2>
+                <p>Since we do not collect personal data, your information is only processed locally on your device to:</p>
+                <ul>
+                    <li>Maintain your current game progress, levels unlocked, and achievements.</li>
+                    <li>Save your game configurations, such as music and SFX settings.</li>
+                    <li>Provide a responsive, high-performance gameplay experience.</li>
+                </ul>
+            </section>
+
+            <!-- Third Party Services -->
+            <section id="third-party" class="card">
+                <h2>Third-Party Services</h2>
+                <p>Our game may utilize core Google Play features to run. These services may collect information used to identify your device for functional stability:</p>
+                <ul>
+                    <li><span class="highlight">Google Play Services:</span> For standard binary distribution, licensing, and stability reports.</li>
+                </ul>
+                <p>Please refer to the <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--neon-cyan); text-decoration: none; font-weight: 600;">Google Privacy Policy</a> for more information on how Google manages analytics and device indicators.</p>
+            </section>
+
+            <!-- Security -->
+            <section id="security" class="card">
+                <h2>Security</h2>
+                <p>We value your trust in playing our game. Because your progress is stored locally on your device, the security of your game progress depends on the security settings of your Android device. We advise keeping your operating system updated and securing your device with PIN/biometrics.</p>
+            </section>
+
+            <!-- Children's Privacy -->
+            <section id="children" class="card">
+                <h2>Children's Privacy</h2>
+                <p>Project Kusanagi does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. Since we do not collect any personal data from any user, children's privacy is fully protected in compliance with COPPA.</p>
+            </section>
+
+            <!-- Changes to this Privacy Policy -->
+            <section id="changes" class="card">
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                <p>These changes are effective immediately after they are posted on this page.</p>
+            </section>
+
+            <!-- Contact Us -->
+            <section id="contact" class="card" style="text-align: center;">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+                <a href="mailto:panji.dev@example.com" class="contact-btn">Email Developer</a>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Project Kusanagi. All rights reserved.</p>
+        <p>Built with Flutter & Flame Engine</p>
+    </footer>
+
+</body>
+</html>

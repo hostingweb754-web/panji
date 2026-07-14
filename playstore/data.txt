@@ -1,1 +1,37 @@
 
+==================================================
+METADATA GOOGLE PLAY STORE - PROJECT KUSANAGI
+==================================================
+
+Nama Aplikasi (App Name):
+Project Kusanagi
+(16 dari batas maksimal 30 karakter)
+
+--------------------------------------------------
+
+Package Name / Application ID:
+com.panji.project_kusanagi
+
+--------------------------------------------------
+
+Deskripsi Singkat (Short Description):
+Kuasai seni cyber-ninja! Hadapi rintangan laser dan tebas musuh di kota futuristik.
+(Tepat 80 karakter dari batas maksimal 80 karakter)
+
+--------------------------------------------------
+
+Deskripsi Panjang (Long Description):
+Masuki dunia masa depan yang dipenuhi bahaya dalam Project Kusanagi, game action-platformer 2D bertema cyberpunk!
+
+Kendalikan seorang Cyber-Ninja legendaris yang lincah dan mematikan. Jelajahi level-level penuh rintangan mekanis, hindari jebakan laser, gergaji berputar, serta kolam asam mematikan demi menyelesaikan misi utama Anda.
+
+Fitur Utama Game:
+• Aksi Ninja Futuristik: Lakukan gerakan parkour memukau seperti berlari cepat (Run), meluncur (Slide), memanjat dinding (Climb), melayang (Glide), dan melompat tinggi untuk melewati rintangan.
+• Sistem Tempur Mematikan: Tebas musuh dengan pedang katana Anda atau lemparkan Kunai/Shuriken jarak jauh untuk menghabisi ancaman dari kejauhan.
+• Teka-teki & Mekanik Level: Aktifkan sakelar (switches) tersembunyi untuk mematikan gerbang laser pengaman guna membuka jalan keluar.
+• Koleksi Cyber-Cell: Kumpulkan item Cyber-Cell berenergi tinggi yang tersebar di sepanjang level untuk mencapai skor tertinggi.
+• Grafik Cyberpunk Menawan: Nikmati visual tile-map futuristik yang didesain rapi dengan musik latar (BGM) dan efek suara tebasan pedang yang imersif.
+• Progress yang Tersimpan Otomatis: Tingkat kesulitan yang menantang dengan penyimpanan level otomatis sehingga Anda dapat melanjutkan petualangan kapan saja.
+
+Apakah Anda memiliki refleks dan insting tajam untuk menaklukkan kota cyber ini? Unduh Project Kusanagi sekarang dan buktikan kemampuan cyber-ninja Anda!
+==================================================
